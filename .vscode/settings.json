@@ -1,0 +1,7 @@
+{
+    "git.confirmSync": false,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'FiraCode Nerd Font'",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true
+}
