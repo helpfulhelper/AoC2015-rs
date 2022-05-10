@@ -31,7 +31,7 @@ fn main() {
 #[allow(dead_code)]
 struct Grid {
     node: [[bool; 1000]; 1000],
-    brightness: [[u16; 1000]; 1000],
+    brightness: [[u8; 1000]; 1000],
 }
 #[allow(dead_code)]
 impl Grid {
@@ -60,13 +60,7 @@ impl Grid {
                 match command {
                     "toggle" => self.brightness[x][y] += 2,
                     "turn on" => self.brightness[x][y] += 1,
-                    "turn off" => {
-                        if self.brightness[x][y] > 0 {
-                            self.brightness[x][y] -= 1
-                        } else {
-                            self.brightness[x][y] = 0
-                        }
-                    }
+                    "turn off" => self.brightness[x][y] = self.brightness[x][y].saturating_sub(1),
                     _ => (),
                 }
             }

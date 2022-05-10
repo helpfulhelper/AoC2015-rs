@@ -1,8 +1,15 @@
 use std::mem;
 
 fn main() {
-    let mut grid = Grid::new();
-    println!("grid uses {} bytes on the stack", mem::size_of_val(&grid));
+    //let mut grid = Grid::new();
+    //println!("grid uses {} bytes on the stack", mem::size_of_val(&grid));
+    let mut test: u8 = 1;
+    println!("{}", test);
+    test -= 1;
+    println!("{}", test);
+    //test -= 1;
+    test.saturating_sub(1);
+    println!("{}", test);
 }
 
 fn main2() {

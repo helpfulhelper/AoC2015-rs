@@ -1,0 +1,14 @@
+0 -> min
+1 -> one
+21845 -> five
+43690 -> aaaa
+65535 -> max
+five -> val
+NOT aaaa -> not
+five AND aaaa -> and
+five OR aaaa -> or
+five LSHIFT one -> lsh
+aaaa RSHIFT one -> rsh
+five AND max -> fm
+lsh AND rsh -> sh
+max LSHIFT 15 -> lm

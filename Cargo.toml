@@ -8,3 +8,4 @@ description = "Advent of Code 2015 puzzles in Rust"
 
 [dependencies]
 rust-crypto = "^0.2"
+itertools = "0.10.3"
