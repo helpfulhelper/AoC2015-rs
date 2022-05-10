@@ -13,10 +13,13 @@ enum Gate {
 }
 fn main() {
     let data = include_str!("day07.txt");
-    let circuits = build_map(data);
+    let mut circuits = build_map(data);
     println!("Circuits built without issue. Calculating a: ");
     let foo = find_val(&circuits, "a");
     println!("a is {:#?}", foo);
+    circuits.insert("b", Gate::NumValue(46065));
+    let bar = find_val(&circuits, "a");
+    println!("a is now {:#?}", bar);
 }
 
 fn build_map(data: &'static str) -> HashMap<&str, Gate> {
